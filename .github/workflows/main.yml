@@ -15,8 +15,10 @@ jobs:
       run: pip install streamlit
     - name: Execution du fichier
       run: streamlit run main.py
-    - name: Git Auto Commit
+    - name: get url
+      run: curl http://10.1.0.137:8501/
         if:{{ Always}}
+    - name: Git Auto Commit
       uses: stefanzweifel/git-auto-commit-action@v5.0.0
       with:
         commit_message: version 1
