@@ -12,11 +12,11 @@ jobs:
     - name: Update pakages
       run: sudo apt update
     - name: Change name of file
-      run: mv main.py streamlit_app.py
+      run: mv main.py streamlit_app.py && mkdir Docs && mv streamlit_app.py /Docs
     - name: setup streamlit
       run: pip install streamlit
     - name: execution
-      run: streamlit run streamlit_app.py
+      run: streamlit run streamlit_app.py 
     #- name: Streamlit App Action
     #  run: pip install streamlit
     #- uses: actions/setup-python@v5
