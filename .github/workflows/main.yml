@@ -12,7 +12,7 @@ jobs:
     - name: Update pakages
       run: sudo apt update
     - name: Change name of file
-      run: mv main.py streamlit_app.py && mkdir Docs && chmod 777 Docs && mv streamlit_app.py /Docs
+      run: cd doc && mv doc/main.py /streamlit_app.py 
     - name: setup streamlit
       run: pip install streamlit
     - name: execution
