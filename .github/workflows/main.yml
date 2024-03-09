@@ -9,12 +9,18 @@ jobs:
     steps:
     - name: Checkout
       uses: actions/checkout@v4.1.1
+      with:
+        fetch-depth: 0
     - name: Update pakages
       run: sudo apt update
-    - name: setup streamlit
-      run: pip install streamlit
-    - name: execution
-      run: streamlit run doc/main.py 
+    - name: Push to hub
+      env:
+        TOKER: ${{secrets.toker}}
+      run: git push https://$TOKER@github.com/georgesmbock/hello_world.git
+    #- name: setup streamlit
+    #  run: pip install streamlit
+    #- name: execution
+    #  run: streamlit run doc/main.py 
     #- name: Streamlit App Action
     #  run: pip install streamlit
     #- uses: actions/setup-python@v5
