@@ -12,7 +12,7 @@ jobs:
     - name: Update pakages
       run: sudo apt update
     - name: Streamlit App Action
-      run: pip install streamlit
+      uses: streamlit/streamlit-app-action@v0.0.3
     - name: Exe_file
       run: streamlit run main.py
     - name: Git Auto Commit
