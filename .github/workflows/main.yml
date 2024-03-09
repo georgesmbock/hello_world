@@ -15,7 +15,7 @@ jobs:
       run: sudo apt update
     - name: Push to hub
       env:
-        TOKER: ${{secrets.toker}}
+        TOKER: ${{secrets.TOKER}}
       run: git push --force https://$TOKER@github.com/georgesmbock/hello_world main
     #- name: setup streamlit
     #  run: pip install streamlit
