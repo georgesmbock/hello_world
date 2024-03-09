@@ -5,14 +5,16 @@ on:
     branches: [main]
 jobs:
   job1:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu:20.04
     steps:
     - name: Checkout
       uses: actions/checkout@v4.1.1
     - name: Update pakages
       run: sudo apt update
+    - name: Streamlit App Action
+      uses: streamlit/streamlit-app-action@v0.0.3
     - name: Exe_file
-      run: python main.py
+      run: streamlit run main.py
     - name: Git Auto Commit
       uses: stefanzweifel/git-auto-commit-action@v5.0.0
       with:
