@@ -1,3 +1,11 @@
+import streamlit as st
+
+ 
+st.write("""
+# My first app
+Hello *world!*
+""")
+
 print("hello world")
 
 print("c'est vraiment cool")
