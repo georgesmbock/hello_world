@@ -12,11 +12,11 @@ jobs:
     - name: Update pakages
       run: sudo apt update
     - name: Streamlit App Action
-      uses: streamlit/streamlit-app-action@v0.0.3
-      with:
-        app-path: streamlit run main.py
-        pytest-args: -v
+      run: pip install streamlit
+    - name: Execution du fichier
+      run: streamlit run main.py
     - name: Git Auto Commit
+        if:{{ Always}}
       uses: stefanzweifel/git-auto-commit-action@v5.0.0
       with:
         commit_message: version 1
