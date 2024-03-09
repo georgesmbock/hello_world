@@ -7,6 +7,8 @@ jobs:
   job1:
     runs-on: ubuntu-latest
     steps:
+    - name: Checkout
+      uses: actions/checkout@v4.1.1
     - name: Update pakages
       run: sudo apt update
     - name: Exe_file
