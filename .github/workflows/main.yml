@@ -27,12 +27,12 @@ jobs:
       #  app-path: streamlit_app.py
        # ruff: true
         #pytest-args: -v --junit-xml=test-results.xml
-    - if: always()
-    - uses: pmeier/pytest-results-action@v0.6.0
-      with:
-          path: test-results.xml
-          summary: true
-          display-options: fEX
+    #- if: always()
+    #- uses: pmeier/pytest-results-action@v0.6.0
+     # with:
+      #    path: test-results.xml
+       #   summary: true
+        #  display-options: fEX
       #run: streamlit run main.py
     #- name: get url
     #  run: curl http://10.1.0.137:8501/
