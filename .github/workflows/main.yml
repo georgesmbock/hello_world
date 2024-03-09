@@ -15,7 +15,6 @@ jobs:
       run: mv main.py streamlit_app.py
     #- name: Streamlit App Action
     #  run: pip install streamlit
-    #- name: Execution du fichier
     - uses: actions/setup-python@v5
       with:
         python-version: '3.11'
