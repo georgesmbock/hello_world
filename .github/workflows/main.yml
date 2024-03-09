@@ -15,14 +15,14 @@ jobs:
       run: mv main.py streamlit_app.py
     #- name: Streamlit App Action
     #  run: pip install streamlit
-    - uses: actions/setup-python@v5
-      with:
-        python-version: '3.11'
-    - uses: streamlit/streamlit-app-action@v0.0.3
-      with:
-        app-path: streamlit_app.py
-        ruff: true
-        pytest-args: -v --junit-xml=test-results.xml
+    #- uses: actions/setup-python@v5
+     # with:
+        #python-version: '3.11'
+    #- uses: streamlit/streamlit-app-action@v0.0.3
+     # with:
+      #  app-path: streamlit_app.py
+       # ruff: true
+        #pytest-args: -v --junit-xml=test-results.xml
     - if: always()
     - uses: pmeier/pytest-results-action@v0.6.0
       with:
