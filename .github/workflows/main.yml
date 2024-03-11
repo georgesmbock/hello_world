@@ -35,8 +35,6 @@ jobs:
       with:
         fetch-depth: 0
     - name: Execution
-    environment:
-      name: Launch
       curl: http://52.159.137.15:8501
         #http://localhost:8501/stream
       if: ${{ always() }}
