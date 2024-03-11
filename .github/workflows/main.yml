@@ -17,8 +17,8 @@ jobs:
       run:  sudo apt install -y pycodestyle
     - name: check code
       run: pycodestyle --first main.py
-    #- name: setup streamlit
-     # run: pip install streamlit
+    - name: setup streamlit
+      run: pip install streamlit
     - name: execution
       run: python3 main.py 
   job2:
