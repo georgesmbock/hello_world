@@ -13,6 +13,8 @@ jobs:
         fetch-depth: 0
     - name: Update pakages
       run: sudo apt update
+    - name: Launch check code
+      run:  sudo apt install pycodestyle && pycodestyle --first main.py
     #- name: setup streamlit
     #  run: pip install streamlit
     #- name: execution
