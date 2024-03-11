@@ -13,14 +13,10 @@ jobs:
         fetch-depth: 0
     - name: Update pakages
       run: sudo apt update
-   # - name: Launch check code
-     # run:  sudo apt install -y pycodestyle
-    #- name: check code
-     # run: pycodestyle --first main.py
-   # - name: Fusion
-     # run: git merge 
-    - name: python
-      run: python --version
+    - name: Launch check code
+      run:  sudo apt install -y pycodestyle
+    - name: check code
+      run: pycodestyle --first main.py
     - name: setup streamlit
       run: pip install streamlit
     - name: execution
@@ -35,7 +31,8 @@ jobs:
       with:
         fetch-depth: 0
     - name: Execution
-      curl: http://52.159.137.15:8501
+      run: curl
+        http://52.159.137.15:8501
         #http://localhost:8501/stream
       if: ${{ always() }}
         
