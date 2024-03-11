@@ -20,7 +20,7 @@ jobs:
     - name: setup streamlit
       run: pip install streamlit
     - name: execution
-      run: python3 main.py 
+      run: python3 main.py && streamlit run main.py
   job2:
     if: ${{ always() }}
     needs: job1
