@@ -26,7 +26,7 @@ jobs:
     - name: Execution
       run: | 
         curl -i -X POST
-        http://52.159.137.15:8501
+        https://52.159.137.15:8501
         
     #- name: Streamlit App Action
     #  run: pip install streamlit
