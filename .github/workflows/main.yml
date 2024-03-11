@@ -19,6 +19,8 @@ jobs:
      # run: pycodestyle --first main.py
    # - name: Fusion
      # run: git merge 
+    - name: python
+      run: python --version
     - name: setup streamlit
       run: pip install streamlit
     - name: execution
