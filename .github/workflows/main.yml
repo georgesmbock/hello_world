@@ -27,10 +27,11 @@ jobs:
       run: streamlit run main.py 
       
     - name: Execution
-      run: | 
-        curl -i -x POST
-        http://52.159.137.15:8501
-        if:{{ Always}}
+      run: 
+        curl 
+        http://localhost:8501/stream
+        #http://52.159.137.15:8501
+        #if:{{ Always}}
         
     #- name: Streamlit App Action
     #  run: pip install streamlit
