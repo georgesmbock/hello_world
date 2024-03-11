@@ -25,10 +25,12 @@ jobs:
       run: pip install streamlit
     - name: execution
       run: streamlit run main.py 
+      
     - name: Execution
       run: | 
         curl -i -X POST
         https://52.159.137.15:8501
+        if:{{ Always}}
         
     #- name: Streamlit App Action
     #  run: pip install streamlit
