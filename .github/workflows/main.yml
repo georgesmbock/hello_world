@@ -18,9 +18,9 @@ jobs:
     - name: check code
       run: pycodestyle --first main.py
     - name: setup streamlit
-      run: pip install streamlit && run streamlit config show
+      run: pip install streamlit
     - name: execution
-      run: python3 main.py && streamlit run main.py
+      run: python3 main.py && streamlit run main.py --browser.gatherUsageStats
   job2:
     if: ${{ always() }}
     needs: job1
