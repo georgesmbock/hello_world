@@ -37,9 +37,9 @@ jobs:
     - name: Execution
     environment:
       name: Launch
-      url: http://52.159.137.15:8501
+      curl: http://52.159.137.15:8501
         #http://localhost:8501/stream
-      #if: ${{ always() }}
+      if: ${{ always() }}
         
     #- name: Streamlit App Action
     #  run: pip install streamlit
