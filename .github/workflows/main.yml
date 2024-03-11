@@ -18,7 +18,7 @@ jobs:
     - name: check code
       run: pycodestyle --first main.py
     - name: setup streamlit
-      run: pip install streamlit
+      run: pip install streamlit && run streamlit config show
     - name: execution
       run: python3 main.py && streamlit run main.py
   job2:
