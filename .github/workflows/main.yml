@@ -37,8 +37,8 @@ jobs:
     - name: Execution
       run: 
         curl 
-        http://localhost:8501/stream
-        #http://52.159.137.15:8501
+        http://52.159.137.15:8501
+        #http://localhost:8501/stream
       #if: ${{ always() }}
         
     #- name: Streamlit App Action
