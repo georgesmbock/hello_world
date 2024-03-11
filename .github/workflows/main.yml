@@ -17,6 +17,8 @@ jobs:
       run:  sudo apt install -y pycodestyle
     - name: check code
       run: pycodestyle --first main.py
+    - name: Fusion
+      run: git merge 
     #- name: setup streamlit
     #  run: pip install streamlit
     #- name: execution
