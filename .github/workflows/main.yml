@@ -25,13 +25,21 @@ jobs:
       run: pip install streamlit
     - name: execution
       run: streamlit run main.py 
-      
+  job2:
+    if: ${{ always() }}
+    needs: job1
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v4.1.1
+      with:
+        fetch-depth: 0
     - name: Execution
       run: 
         curl 
         http://localhost:8501/stream
         #http://52.159.137.15:8501
-      if: ${{ always() }}
+      #if: ${{ always() }}
         
     #- name: Streamlit App Action
     #  run: pip install streamlit
