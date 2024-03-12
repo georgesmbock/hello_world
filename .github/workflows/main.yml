@@ -1,8 +1,13 @@
 name: Test
 
 on:
-  push: 
-    branches: [main]
+  pull_request: 
+    types:
+      - opened
+    branches: 
+      - "main"
+    paths:
+      - 'main.py'
 jobs:
   job1:
     runs-on: ubuntu-latest
