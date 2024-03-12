@@ -26,18 +26,18 @@ jobs:
       run: pip install streamlit
     - name: execution
       run: python3 main.py && streamlit run main.py --server.port 80
-  job2:
-    if: ${{ always() }}
-    needs: job1
-    runs-on: ubuntu-latest
-    steps:
-    - name: Checkout
-      uses: actions/checkout@v4.1.1
-      with:
-        fetch-depth: 0
-    - name: Execution
-      run: curl
-        http://52.159.137.15:8501
+  #job2:
+   # if: ${{ always() }}
+    #needs: job1
+    #runs-on: ubuntu-latest
+    #steps:
+    #- name: Checkout
+     # uses: actions/checkout@v4.1.1
+      #with:
+       # fetch-depth: 0
+    #- name: Execution
+     # run: curl
+      #  http://52.159.137.15:8501
         #http://localhost:8501/stream
       #if: ${{ always() }}
         
