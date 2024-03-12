@@ -4,7 +4,7 @@ import requests as rq
 from bs4 import BeautifulSoup as bs
 import time
 
-soup =bs("", "html.parser")
+#soup =bs("", "html.parser")
 
 def parsers(e):
     """"Cette fonction vérifie si un élément sélectionner dans soup exite puis
